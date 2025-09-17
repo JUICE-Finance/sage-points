@@ -1,0 +1,16 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./Dockerfile"
+
+[deploy]
+startCommand = "./points-calculator"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "always"
+
+# Environment variables 
+# DATABASE_URL - Automatically provided by Railway PostgreSQL
+# PORT - Automatically provided by Railway
+# BASE_RPC_URL - Set in Railway dashboard
+# CONTRACT_ADDRESS - Set in Railway dashboard  
+# DEPLOYMENT_BLOCK - Set in Railway dashboard

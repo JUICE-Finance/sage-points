@@ -1,0 +1,9 @@
+target/
+Dockerfile
+.dockerignore
+.git/
+.gitignore
+*.md
+.env
+.env.local
+app.log
