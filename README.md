@@ -19,16 +19,6 @@ A Rust-based service that monitors the SageStaking smart contract on Base mainne
 
 ## Installation
 
-### Quick Setup
-```bash
-# Run the setup script
-./setup.sh
-
-# Edit .env file with your database credentials
-cp env.example .env
-# Edit .env with your PostgreSQL connection string
-```
-
 ### Manual Setup
 1. Install PostgreSQL
 2. Create database: `createdb points_calculator`
