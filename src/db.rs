@@ -269,9 +269,9 @@ impl Database {
             let seconds_staked = (end_timestamp - deposit_timestamp) as f64;
             let days_staked = seconds_staked / 86400.0;
             
-            // Calculate points (0.01 SAGE per token per day, 0.0025 Formation per token per day)
+            // Calculate points (0.01 SAGE per token per day, 0.005 Formation per token per day)
             sage_points += amount_float * days_staked * 0.01;
-            formation_points += amount_float * days_staked * 0.0025;
+            formation_points += amount_float * days_staked * 0.005;
 
             // Sum amounts by status
             match status.as_str() {
@@ -360,7 +360,7 @@ impl Database {
                                 ELSE 
                                     to_timestamp(deposit_timestamp)
                             END
-                        )) - deposit_timestamp) / 86400.0 * 0.0025
+                        )) - deposit_timestamp) / 86400.0 * 0.005
                     ) AS formation_points
                 FROM positions
                 GROUP BY user_address

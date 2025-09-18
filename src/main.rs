@@ -175,7 +175,7 @@ impl PointsTracker {
         let tokens = format_token_amount_as_float(position.amount);
         
         // 0.01 SAGE points per token per day
-        // 0.0025 Formation points per token per day
+        // 0.005 Formation points per token per day
         PointsBreakdown {
             sage_points: tokens * days_staked * 0.01,
             formation_points: tokens * days_staked * 0.005,
